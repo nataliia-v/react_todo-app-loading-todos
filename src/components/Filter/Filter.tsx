@@ -17,7 +17,7 @@ export const Filter: React.FC<Props> = ({
     <nav className="filter" data-cy="Filter">
       {filterParams.map(param => (
         <a
-          href={param.toLowerCase()}
+          href={param === FilterParams.ALL ? '#/' : `#/${param.toLowerCase()}`}
           key={param}
           className={cn('filter__link', {
             selected: selectedFilterParam === param,

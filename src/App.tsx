@@ -32,7 +32,7 @@ export const App: React.FC = () => {
         }, 3000);
       })
       .finally(() => setTodosLoading(false));
-  }, [selectedFilterParam]);
+  }, []);
 
   const handleChangeFilterParam = useCallback((filterParam: FilterParams) => {
     setSelectedFilterParam(filterParam);
